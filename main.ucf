@@ -1,0 +1,155 @@
+NET "CLK" TNM_NET = "CLK";
+TIMESPEC TS_CLK = PERIOD "CLK" 20.833 ns HIGH 50 %;
+NET "CLK" LOC = L22;
+NET "CLK" IOSTANDARD = LVCMOS33;
+
+NET "CS" LOC = AB11;
+NET "CS" IOSTANDARD = LVCMOS33;
+
+# Din
+NET "pb[0]" LOC = Y17;
+NET "pb[0]" IOSTANDARD = LVCMOS33;
+NET "pb[1]" LOC = V13;
+NET "pb[1]" IOSTANDARD = LVCMOS33;
+NET "pb[2]" LOC = W13;
+NET "pb[2]" IOSTANDARD = LVCMOS33;
+NET "pb[3]" LOC = AA8;
+NET "pb[3]" IOSTANDARD = LVCMOS33;
+NET "pb[4]" LOC = AB8;
+NET "pb[4]" IOSTANDARD = LVCMOS33;
+NET "pb[5]" LOC = W6;
+NET "pb[5]" IOSTANDARD = LVCMOS33;
+NET "pb[6]" LOC = Y6;
+NET "pb[6]" IOSTANDARD = LVCMOS33;
+NET "pb[7]" LOC = Y9;
+NET "pb[7]" IOSTANDARD = LVCMOS33;
+
+# Dout
+NET "pc[0]" LOC = G20;
+NET "pc[0]" IOSTANDARD = LVCMOS33;
+NET "pc[1]" LOC = T20;
+NET "pc[1]" IOSTANDARD = LVCMOS33;
+NET "pc[2]" LOC = Y5;
+NET "pc[2]" IOSTANDARD = LVCMOS33;
+NET "pc[3]" LOC = AB9;
+NET "pc[3]" IOSTANDARD = LVCMOS33;
+NET "pc[4]" LOC = G19;
+NET "pc[4]" IOSTANDARD = LVCMOS33;
+NET "pc[5]" LOC = H20;
+NET "pc[5]" IOSTANDARD = LVCMOS33;
+NET "pc[6]" LOC = H19;
+NET "pc[6]" IOSTANDARD = LVCMOS33;
+NET "pc[7]" LOC = H18;
+NET "pc[7]" IOSTANDARD = LVCMOS33;
+
+# Status output
+NET "pd[0]" LOC = V21;
+NET "pd[0]" IOSTANDARD = LVCMOS33;
+NET "pd[1]" LOC = V22;
+NET "pd[1]" IOSTANDARD = LVCMOS33;
+NET "pd[2]" LOC = U20;
+NET "pd[2]" IOSTANDARD = LVCMOS33;
+NET "pd[3]" LOC = U22;
+NET "pd[3]" IOSTANDARD = LVCMOS33;
+NET "pd[4]" LOC = R20;
+NET "pd[4]" IOSTANDARD = LVCMOS33;
+NET "pd[5]" LOC = R22;
+NET "pd[5]" IOSTANDARD = LVCMOS33;
+NET "pd[6]" LOC = P18;
+NET "pd[6]" IOSTANDARD = LVCMOS33;
+NET "pd[7]" LOC = P19;
+NET "pd[7]" IOSTANDARD = LVCMOS33;
+
+# Control inputs
+# PA0
+NET "SLOWCLK" LOC = AA22;
+NET "SLOWCLK" IOSTANDARD = LVCMOS33;
+# PA4
+NET "RESET2" LOC = AB21;
+NET "RESET2" IOSTANDARD = LVCMOS33;
+# PA5
+NET "RD" LOC = Y18;
+NET "RD" IOSTANDARD = LVCMOS33;
+# PA6
+NET "WR" LOC = AB5;
+NET "WR" IOSTANDARD = LVCMOS33;
+# PA7
+NET "RESET" LOC = AB17;
+NET "RESET" IOSTANDARD = LVCMOS33;
+# FPGA id
+NET "fpgaID[1]" LOC = R13;
+NET "fpgaID[1]" IOSTANDARD = LVCMOS33;
+NET "fpgaID[0]" LOC = T12;
+NET "fpgaID[0]" IOSTANDARD = LVCMOS33;
+
+
+# NET "SCL" LOC = "F22" | IOSTANDARD = LVCMOS33 ;
+# NET "SDA" LOC = "E22" | IOSTANDARD = LVCMOS33 ;
+
+
+INST "des_core/crypt_shift_instance2" AREA_GROUP = "pblock_crypt_shft_instnc2_2";
+AREA_GROUP "pblock_crypt_shft_instnc2_2" RANGE=SLICE_X98Y122:SLICE_X127Y144;
+INST "des_core/crypt_shift_instance3" AREA_GROUP = "pblock_crypt_shft_instnc3_1";
+AREA_GROUP "pblock_crypt_shft_instnc3_1" RANGE=SLICE_X98Y100:SLICE_X127Y121;
+INST "des_core/crypt_shift_instance4" AREA_GROUP = "pblock_crypt_shft_instnc4_1";
+AREA_GROUP "pblock_crypt_shft_instnc4_1" RANGE=SLICE_X98Y78:SLICE_X127Y99;
+INST "des_core/crypt_shift_instance5" AREA_GROUP = "pblock_crypt_shft_instnc5_1";
+AREA_GROUP "pblock_crypt_shft_instnc5_1" RANGE=SLICE_X98Y56:SLICE_X127Y77;
+INST "des_core/crypt_shift_instance6" AREA_GROUP = "pblock_crypt_shft_instnc6_1";
+AREA_GROUP "pblock_crypt_shft_instnc6_1" RANGE=SLICE_X98Y34:SLICE_X127Y55;
+INST "des_core/crypt_shift_instance7" AREA_GROUP = "pblock_crypt_shft_instnc7_1";
+AREA_GROUP "pblock_crypt_shft_instnc7_1" RANGE=SLICE_X98Y11:SLICE_X127Y33;
+INST "des_core/crypt_shift_instance8" AREA_GROUP = "pblock_crypt_shft_instnc8_1";
+AREA_GROUP "pblock_crypt_shft_instnc8_1" RANGE=SLICE_X68Y12:SLICE_X97Y36;
+INST "des_core/crypt_shift_instance9" AREA_GROUP = "pblock_crypt_shft_instnc9_1";
+AREA_GROUP "pblock_crypt_shft_instnc9_1" RANGE=SLICE_X68Y37:SLICE_X97Y58;
+INST "des_core/crypt_shift_instance10" AREA_GROUP = "pblock_crypt_shft_instnc10_1";
+AREA_GROUP "pblock_crypt_shft_instnc10_1" RANGE=SLICE_X68Y59:SLICE_X97Y80;
+INST "des_core/crypt_shift_instance11" AREA_GROUP = "pblock_crypt_shft_instnc1_3";
+AREA_GROUP "pblock_crypt_shft_instnc1_3" RANGE=SLICE_X68Y81:SLICE_X97Y102;
+INST "des_core/crypt_shift_instance12" AREA_GROUP = "pblock_crypt_shft_instnc12_1";
+AREA_GROUP "pblock_crypt_shft_instnc12_1" RANGE=SLICE_X68Y103:SLICE_X97Y124;
+INST "des_core/crypt_shift_instance13" AREA_GROUP = "pblock_crypt_shft_instnc13_1";
+AREA_GROUP "pblock_crypt_shft_instnc13_1" RANGE=SLICE_X68Y125:SLICE_X97Y146;
+INST "des_core/crypt_shift_instance14" AREA_GROUP = "pblock_crypt_shft_instnc14_1";
+AREA_GROUP "pblock_crypt_shft_instnc14_1" RANGE=SLICE_X68Y147:SLICE_X97Y168;
+INST "des_core/crypt_shift_instance15" AREA_GROUP = "pblock_crypt_shft_instnc15_1";
+AREA_GROUP "pblock_crypt_shft_instnc15_1" RANGE=SLICE_X82Y169:SLICE_X83Y175, SLICE_X80Y169:SLICE_X81Y183, SLICE_X48Y169:SLICE_X79Y191;
+INST "des_core/crypt_shift_instance16" AREA_GROUP = "pblock_crypt_shft_instnc16_1";
+AREA_GROUP "pblock_crypt_shft_instnc16_1" RANGE=SLICE_X34Y168:SLICE_X67Y144;
+INST "des_core/crypt_shift_instance17" AREA_GROUP = "pblock_crypt_shft_instnc17_1";
+AREA_GROUP "pblock_crypt_shft_instnc17_1" RANGE=SLICE_X0Y155:SLICE_X33Y174;
+INST "des_core/crypt_shift_instance18" AREA_GROUP = "pblock_crypt_shft_instnc18_1";
+AREA_GROUP "pblock_crypt_shft_instnc18_1" RANGE=SLICE_X0Y135:SLICE_X33Y154;
+INST "des_core/crypt_shift_instance19" AREA_GROUP = "pblock_crypt_shft_instnc19_1";
+AREA_GROUP "pblock_crypt_shft_instnc19_1" RANGE=SLICE_X34Y124:SLICE_X67Y143;
+INST "des_core/crypt_shift_instance20" AREA_GROUP = "pblock_crypt_shft_instnc20_1";
+AREA_GROUP "pblock_crypt_shft_instnc20_1" RANGE=SLICE_X34Y104:SLICE_X67Y123;
+INST "des_core/crypt_shift_instance21" AREA_GROUP = "pblock_crypt_shft_instnc21_1";
+AREA_GROUP "pblock_crypt_shft_instnc21_1" RANGE=SLICE_X0Y104:SLICE_X33Y123;
+INST "des_core/crypt_shift_instance22" AREA_GROUP = "pblock_crypt_shft_instnc2_3";
+AREA_GROUP "pblock_crypt_shft_instnc2_3" RANGE=SLICE_X0Y84:SLICE_X33Y103;
+INST "des_core/crypt_shift_instance23" AREA_GROUP = "pblock_crypt_shft_instnc23_1";
+AREA_GROUP "pblock_crypt_shft_instnc23_1" RANGE=SLICE_X34Y103:SLICE_X67Y84;
+INST "des_core/crypt_shift_instance24" AREA_GROUP = "pblock_crypt_shft_instnc24_1";
+AREA_GROUP "pblock_crypt_shft_instnc24_1" RANGE=SLICE_X34Y64:SLICE_X67Y83;
+INST "des_core/crypt_shift_instance25" AREA_GROUP = "pblock_crypt_shft_instnc25_1";
+AREA_GROUP "pblock_crypt_shft_instnc25_1" RANGE=SLICE_X0Y64:SLICE_X33Y83;
+
+
+INST "output_queue" AREA_GROUP = "pblock_output_queue";
+AREA_GROUP "pblock_output_queue" RANGE=SLICE_X12Y50:SLICE_X27Y59;
+INST "size_conversion" AREA_GROUP = "pblock_size_conversion";
+AREA_GROUP "pblock_size_conversion" RANGE=SLICE_X0Y50:SLICE_X9Y63;
+AREA_GROUP "pblock_size_conversion" RANGE=DSP48_X0Y13:DSP48_X0Y15;
+AREA_GROUP "pblock_size_conversion" RANGE=RAMB16_X0Y26:RAMB16_X0Y30;
+AREA_GROUP "pblock_size_conversion" RANGE=RAMB8_X0Y26:RAMB8_X0Y31;
+      
+#INST "srl8_to_64_instance" AREA_GROUP = "pblock_srl8_to_64_instance";
+
+INST "input_queue" AREA_GROUP = "pblock_1";
+INST "des_core/crypt_shift_instance1" AREA_GROUP = "pblock_1";
+AREA_GROUP "pblock_1" RANGE=SLICE_X98Y146:SLICE_X127Y168;
+AREA_GROUP "pblock_1" RANGE=DSP48_X2Y37:DSP48_X3Y41;
+AREA_GROUP "pblock_1" RANGE=RAMB16_X4Y74:RAMB16_X5Y82;
+AREA_GROUP "pblock_1" RANGE=RAMB8_X4Y74:RAMB8_X5Y83;

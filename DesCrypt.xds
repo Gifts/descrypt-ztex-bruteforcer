@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<DesignStrategy goal="Des" strategy="DesCrypt" version="12.1">
+
+  <Description>Descrypt</Description>
+
+  <DeviceList devices="spartan6"/>
+
+  <Properties>
+    <property name="Synthesize - XST:Optimization Goal" value="Speed"/>
+    <property name="Synthesize - XST:Optimization Effort" value="High"/>
+    <property name="Synthesize - XST:Cross Clock Analysis" value="true"/>
+    <property name="Synthesize - XST:Automatic BRAM Packing" value="true"/>
+    <property name="Synthesize - XST:Shift Register Extraction" value="true"/>
+    <property name="Synthesize - XST:Shift Register Minimum Size" value="3"/>
+    <property name="Synthesize - XST:Register Balancing" value="Yes"/>
+    <property name="Synthesize - XST:Optimize Instantiated Primitives" value="true"/>
+    <property name="Map:Placer Effort Level" value="High"/>
+    <property name="Map:Placer Extra Effort" value="Normal"/>
+    <property name="Map:Combinatorial Logic Optimization" value="true"/>
+    <property name="Map:Global Optimization" value="Speed"/>
+    <property name="Map:Equivalent Register Removal" value="true"/>
+    <property name="Place &amp; Route:Place And Route Mode" value="Reentrant Route"/>
+    <property name="Place &amp; Route:Place &amp; Route Effort Level (Overall)" value="High"/>
+    <property name="Place &amp; Route:Extra Effort (Highest PAR level only)" value="Normal"/>
+    <property name="Place &amp; Route:Enable Multi-Threading" value="3"/>
+  </Properties>
+
+</DesignStrategy>
