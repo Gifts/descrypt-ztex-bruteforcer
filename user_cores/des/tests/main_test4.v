@@ -80,6 +80,7 @@ module main_test4;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
+		
 		pc <= 8'h31;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
@@ -89,8 +90,7 @@ module main_test4;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
-		
-		
+
 		pc <= 8'h61; SLOWCLK <= ~SLOWCLK; #50;
 		pc <= 8'h62; SLOWCLK <= ~SLOWCLK; #50;
 		pc <= 8'h63; SLOWCLK <= ~SLOWCLK; #50;
@@ -102,10 +102,10 @@ module main_test4;
 
 
 		WR <= 0;
-		#8000;
+		#876;
 		WR <= 0;
 		RD <= 1;
-		#50;
+		//#50;
 		
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
@@ -115,26 +115,26 @@ module main_test4;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
 		SLOWCLK <= ~SLOWCLK; #50;
-
+	
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		SLOWCLK <= ~SLOWCLK; #50;
+		
 		#100;
-		
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
-		SLOWCLK <= ~SLOWCLK; #50;
+	
+		if (pb != 8'h18) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'hdf) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'h29) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'hdc) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'hdb) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'hab) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'h5b) $finish; SLOWCLK <= ~SLOWCLK; #50;
+		if (pb != 8'h10) $finish; SLOWCLK <= ~SLOWCLK; #50;
 		
 
 
